@@ -13,7 +13,7 @@ git clone https://github.com/apache/couchdb.git /tmp/couchdb
 cd /tmp/couchdb
 git checkout tags/1.5.0
 
-git apply /build/docker-npmjs/fast_binary_match.patch
+git apply /build/docker-couchdb/fast_binary_match.patch
 
 ./bootstrap
 ./configure --prefix=/opt/couchdb && make && make install
