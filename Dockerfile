@@ -14,3 +14,6 @@ RUN /build/docker-couchdb/prepare.sh
 RUN /build/docker-couchdb/install_couchdb.sh
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Expose for linking with other containers
+EXPOSE 5984
