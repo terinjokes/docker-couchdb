@@ -22,4 +22,4 @@ useradd -d /opt/couchdb/lib/couchdb couchdb
 
 mkdir /etc/service/couchdb
 cp /build/docker-couchdb/runit/couchdb.sh /etc/service/couchdb/run
-cp /build/docker-npmjs/50_enforce_couchdb_permissions.sh /etc/my_init.d/
+cp /build/docker-couchdb/50_enforce_couchdb_permissions.sh /etc/my_init.d/
