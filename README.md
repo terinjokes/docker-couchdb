@@ -14,7 +14,14 @@ In addition to what [baseimage-docker includes](https://github.com/phusion/basei
 - A Runit service to ensure CouchDB is brought up with the container and is restarted on crashes.
 - A boot task to ensure permissions are properly set, allowing the database to live outside the container.
 
+## Saving the database outside the container
+You can save the databases outside the container by mapping it to a directory on your host:
 
+```
+docker run -v /path/on/host/couchdb:/opt/couchdb/var/lib/couchdb/:rw terinjokes/docker-couchdb
+```
+
+For more information, see the Docker documentation on [mounting a host directory](http://docs.docker.io/en/latest/use/working_with_volumes/#mount-a-host-directory-as-a-container-volume).
 
 ## Related Projects
 
