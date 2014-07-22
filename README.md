@@ -26,4 +26,5 @@ For more information, see the Docker documentation on [mounting a host directory
 ## Related Projects
 
 - Looking to create a private npmjs registry? [docker-npmjs](https://github.com/terinjokes/docker-npmjs).
-- Want a mirror of the public npmjs registry? [skim (without attachments)](https://github.com/terinjokes/docker-npmjs-skim) or [fullfat (with attachments)](https://github.com/terinjokes/docker-npmjs-fullfat).
+- Want a mirror of the public npmjs registry? [enjoy skim](https://github.com/terinjokes/docker-npmjs-skim).
+- Private registry with delegation to a public registry more your taste? [docker-npmjs-delegate](https://github.com/terinjokes/docker-npmjs-delegate).
