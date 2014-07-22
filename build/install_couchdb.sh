@@ -11,9 +11,7 @@ $minimal_apt_get_install erlang-base-hipe erlang-crypto erlang-eunit \
 
 git clone https://github.com/apache/couchdb.git /tmp/couchdb
 cd /tmp/couchdb
-git checkout tags/1.5.0
-
-git apply /build/docker-couchdb/fast_binary_match.patch
+git checkout tags/1.6.0
 
 ./bootstrap
 ./configure --prefix=/opt/couchdb && make && make install
