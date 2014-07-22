@@ -10,7 +10,7 @@ This container is available for pulling from [the Docker registry](https://index
 
 In addition to what [baseimage-docker includes](https://github.com/phusion/baseimage-docker#overview), this container contains:
 
-- CouchDB 1.5 with a [fast binary match](https://github.com/terinjokes/docker-couchdb/blob/master/build/fast_binary_match.patch) to aid in replication of attachments.
+- CouchDB 1.6.0.
 - A Runit service to ensure CouchDB is brought up with the container and is restarted on crashes.
 - A boot task to ensure permissions are properly set, allowing the database to live outside the container.
 
@@ -18,7 +18,7 @@ In addition to what [baseimage-docker includes](https://github.com/phusion/basei
 You can save the databases outside the container by mapping it to a directory on your host:
 
 ```
-docker run -v /path/on/host/couchdb:/opt/couchdb/var/lib/couchdb/:rw terinjokes/docker-couchdb
+docker run -v /path/on/host/couchdb:/opt/couchdb/var/lib/couchdb/:rw terinjokes/couchdb
 ```
 
 For more information, see the Docker documentation on [mounting a host directory](http://docs.docker.io/en/latest/use/working_with_volumes/#mount-a-host-directory-as-a-container-volume).
@@ -27,4 +27,3 @@ For more information, see the Docker documentation on [mounting a host directory
 
 - Looking to create a private npmjs registry? [docker-npmjs](https://github.com/terinjokes/docker-npmjs).
 - Want a mirror of the public npmjs registry? [skim (without attachments)](https://github.com/terinjokes/docker-npmjs-skim) or [fullfat (with attachments)](https://github.com/terinjokes/docker-npmjs-fullfat).
-- Private registry with delegation to a public registry more your taste? [docker-npmjs-delegate](https://github.com/terinjokes/docker-npmjs-delegate).
